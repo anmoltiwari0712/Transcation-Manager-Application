@@ -1,0 +1,128 @@
+.filter-container {
+  padding: 20px;
+  padding-left: 30px;
+}
+
+.Filter-heading {
+  padding-left: 30px;
+}
+
+.filters {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+  padding-left: 30px;
+}
+
+.filters select,
+.filters input {
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.transaction-list {
+  padding-left: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+.transaction-card {
+  width: calc(33.333% - 40px);
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease,
+    border-color 0.3s ease;
+}
+
+.transaction-card .card-header,
+.transaction-card .card-body {
+  margin: 10px 5px;
+  padding: 0;
+  text-align: left;
+}
+
+body.dark-mode .filter-container {
+  background-color: #333;
+  color: #fff;
+}
+
+body.dark-mode .filters select,
+body.dark-mode .filters input {
+  background-color: #555;
+  color: #fff;
+  border: 1px solid #777;
+}
+
+body.dark-mode .transaction-card {
+  background-color: #444;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+body.dark-mode .transaction-card:hover {
+  background-color: #191919;
+  border: 1px solid #555;
+}
+
+body.dark-mode .transaction-card:hover .card-header h3,
+body.dark-mode .transaction-card:hover .card-body div {
+  color: #fff;
+}
+
+body.dark-mode .card-date {
+  color: #bbb;
+}
+
+.transaction-card {
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+}
+
+.transaction-card:hover {
+  background-color: #00838d;
+  border: 1px solid #00838d;
+}
+
+.transaction-card:hover .card-header h3,
+.transaction-card:hover .card-body div {
+  color: #fff;
+}
+
+.transaction-card:hover .card-date {
+  color: #fff;
+}
+
+.transaction-card span {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: top 0.3s cubic-bezier(0.6, 0.4, 0, 1),
+    font-size 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+.transaction-card:hover span {
+  top: 0;
+  font-size: 1.2em;
+  color: white;
+}

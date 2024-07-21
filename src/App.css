@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.Heading-1 {
+  font-family: "Libre Franklin", sans-serif;
+
+  font-weight: 700;
+  font-size: 14px;
+}
+
+.app-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  padding-top: 50px;
+  padding-left: 70px;
+  padding-right: 55px;
+  background-color: var(--header-bg);
+  border-bottom: 1px solid #ddd;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: var(--text-color);
+}
+
+.dark-mode-toggle {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  color: var(--button-text);
+}
+
+.icon-sun {
+  color: #ffa500;
+}
+
+.icon-moon {
+  color: var(--button-text);
+}
+
+.dark-mode-toggle:hover {
+  color: var(--button-hover-text);
+}
+
+body.dark-mode .header h1 {
+  color: #fff;
+}
+
+body.dark-mode .dark-mode-toggle {
+  color: #fff;
+}
+
+.content-container {
+  padding: 20px;
+}
+
+body.dark-mode .content-container {
+  padding: 20px;
+}

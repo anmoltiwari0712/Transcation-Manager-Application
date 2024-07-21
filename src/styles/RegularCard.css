@@ -1,0 +1,84 @@
+.card {
+  --bg-light: #f2f8f9;
+  --bg-dark: #464646;
+  --hover-bg-light: #00838d;
+  --hover-bg-dark: #191919;
+  --hover-text-light: black;
+  --hover-text-dark: white;
+
+  width: 100%;
+  max-width: 23ch;
+  text-align: center;
+  background: var(--bg-light);
+  padding: 1.5em;
+  padding-block: 1.8em;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  position: relative;
+  overflow: hidden;
+  transition: background 0.3s cubic-bezier(0.6, 0.4, 0, 1), transform 0.15s ease,
+    border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+body.dark-mode .card {
+  background: var(--bg-dark);
+  color: var(--hover-text-dark);
+  border: 1px solid #555;
+}
+
+body.dark-mode .card:hover {
+  background: var(--hover-bg-dark);
+}
+
+body.dark-mode .card:hover span {
+  color: var(--hover-text-dark);
+}
+
+.card {
+  background: var(--bg-light);
+  color: #464853;
+  border: 1px solid #ddd;
+}
+
+.card:hover {
+  background: var(--hover-bg-light);
+}
+
+.card:hover > div,
+.card:hover > strong {
+  opacity: 0;
+}
+
+.card span {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--hover-text-light);
+  border-radius: 5px;
+  font-weight: bold;
+  top: 100%;
+  transition: top 0.3s cubic-bezier(0.6, 0.4, 0, 1),
+    font-size 0.3s cubic-bezier(0.6, 0.4, 0, 1);
+}
+
+.card:hover span {
+  top: 0;
+  font-size: 1.2em;
+}
+
+.card-icon {
+  max-width: 50px;
+  max-height: 50px;
+}
+.card-link {
+  text-decoration: none;
+}

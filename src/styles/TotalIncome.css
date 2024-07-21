@@ -1,0 +1,65 @@
+.total-income-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.filters {
+  margin-bottom: 20px;
+}
+
+.filter {
+  margin-right: 20px;
+  display: inline-block;
+}
+
+.charts-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.chart {
+  flex: 1;
+  max-width: 30%;
+  margin: 0 10px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pie-chart,
+.bar-chart {
+  margin-bottom: 20px;
+}
+
+h3 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .charts-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .chart {
+    max-width: 90%;
+    margin: 10px 0;
+  }
+
+  .pie-chart,
+  .bar-chart {
+    width: 100%;
+    height: auto;
+  }
+
+  .chart h3 {
+    font-size: 0.8rem;
+    margin-bottom: 25px;
+  }
+}

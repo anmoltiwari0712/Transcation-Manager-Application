@@ -1,0 +1,198 @@
+:root {
+  --background-light: white;
+  --background-dark: #464646;
+  --dialog-background-light: white;
+  --dialog-background-dark: #333;
+  --text-light: #333;
+  --text-dark: #f0f0f0;
+  --border-light: #ddd;
+  --border-dark: #444;
+  --button-bg-income: #28a745;
+  --button-bg-expense: #ee4b2b;
+  --button-active-bg-expense: #c62828;
+}
+
+body {
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+body.dark-mode {
+  --background: var(--background-dark);
+  --dialog-background: var(--dialog-background-dark);
+  --text-color: var(--text-dark);
+  --border-color: var(--border-dark);
+}
+
+.dialog-container {
+  display: flex;
+  padding-top: 100px;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.dialog-box {
+  background-color: var(--dialog-background-light);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 500px;
+  border: 1px solid var(--border-light);
+}
+
+h2 {
+  margin-top: 0;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+.toggle-button {
+  padding: 10px 65px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+  flex: 1;
+  text-align: center;
+  max-width: 200px;
+}
+
+.toggle-button.income {
+  background-color: var(--button-bg-income);
+}
+
+.toggle-button.expense {
+  background-color: var(--button-bg-expense);
+}
+
+.toggle-button.expense.active {
+  background-color: var(--button-active-bg-expense);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+label {
+  font-weight: bold;
+}
+
+input[type="date"],
+input[type="number"],
+input[type="text"],
+textarea,
+select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border-light);
+  border-radius: 4px;
+  box-sizing: border-box;
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+textarea {
+  height: 100px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--button-bg-income);
+  color: white;
+  cursor: pointer;
+  width: 100%;
+}
+
+button[type="button"] {
+  background-color: var(--button-bg-expense);
+  margin-top: 10px;
+}
+
+body.dark-mode .dialog-box {
+  background-color: var(--dialog-background-dark);
+  border: 1px solid var(--border-dark);
+}
+
+body.dark-mode input[type="date"],
+body.dark-mode input[type="number"],
+body.dark-mode input[type="text"],
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: var(--background-dark);
+  color: var(--text-dark);
+  border: 1px solid var(--border-dark);
+}
+
+body.dark-mode button {
+  background-color: var(--button-bg-income);
+}
+
+body.dark-mode button[type="button"] {
+  background-color: var(--button-bg-expense);
+}
+@media (max-width: 768px) {
+  .toggle-button {
+    padding: 10px;
+    margin: 0 2px;
+  }
+
+  .dialog-box {
+    padding: 15px;
+  }
+
+  button,
+  input[type="date"],
+  input[type="number"],
+  input[type="text"],
+  textarea,
+  select {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  .toggle-button {
+    padding: 10px;
+    margin: 0 2px;
+  }
+
+  .dialog-box {
+    margin: 40px;
+  }
+
+  button,
+  input[type="date"],
+  input[type="number"],
+  input[type="text"],
+  textarea,
+  select {
+    padding: 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .toggle-container {
+    flex-direction: column;
+  }
+
+  .toggle-button {
+    width: 40%;
+    margin-bottom: 10px;
+  }
+}
